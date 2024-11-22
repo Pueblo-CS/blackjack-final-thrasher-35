@@ -1,0 +1,142 @@
+body {
+    background-color: green;
+    height: 100vh;
+    margin: 0px;
+}
+
+#dealer-area, #player-area {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border: 4px solid gold;
+    border-radius: 2vh;
+    margin: 4vh;
+    padding: 4vh;
+    min-height: 22vh;
+}
+
+#dealer-area::after, #player-area::after {
+    text-align: justify;
+    color: gold;
+    font-size: 10vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#dealer-area::after {
+    content: "D E A L E R";
+}
+
+#player-area::after {
+    content: "P L A Y E R";
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 1vh;
+    height: 18vh;
+    width: 12vh;
+    border: 2px solid black;
+    margin: 1vh;
+}
+
+.card > p {
+    font-size: 7vh;
+    margin: 0px;
+    text-align: center;
+}
+
+.card > img {
+    display: block;
+    width: 40%;
+    margin-bottom: 4%;
+}
+
+.red {
+    color: red;
+}
+
+.black {
+    color: black;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#controls button {
+    display:block;
+    font-size: 5vh;
+    background-color: green;
+    border: 4px solid gold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 8px;
+    color: gold;
+    cursor: pointer;
+}
+
+#controls button:hover {
+    color: green;
+    background-color: gold;
+}
+
+#hit-button, #stay-button {
+    visibility: visible;
+}
+
+#play-popup {
+    position: absolute;
+    background-color: rgba(1, 1, 1, 0.37);
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play-popup > #window {
+    background-color: gold;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#play-popup > #window h1 {
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 0px;
+}
+
+#play-popup > #window p {
+    text-align: center;
+    font-size: 40px;
+}
+
+#play-popup button {
+    display:block;
+    font-size: 5vh;
+    background-color: gold;
+    border: 4px solid gold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 8px;
+    color: green;
+    cursor: pointer;
+}
+
+#play-popup button:hover {
+    color: gold;
+    background-color: green;
+}
